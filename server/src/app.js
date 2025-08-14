@@ -12,7 +12,9 @@ const {
 } = require("../src/controllers/poll");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://event-polling-1.onrender.com/' // Replace with your front-end URL
+}));
 app.use(express.json());
 
 const port = process.env.PORT || 5500;
