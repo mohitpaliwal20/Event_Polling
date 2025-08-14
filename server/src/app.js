@@ -58,7 +58,7 @@ mongoose.connection.on('disconnected', () => {
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: "https://event-polling-1.onrender.com",
     methods: ["GET", "POST"],
     credentials: true,
   },
